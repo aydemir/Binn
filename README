@@ -1,1 +1,23 @@
-Pardus Online Paket Yükleme - Format atmadan önce Popi'yi kullanarak listesini çıkardığınız (varsayılan dışı) paketleri format sonraki Popi'yi kullanarak yüklemenizi sağlayan uygulamadır.
+--- Pardus Online Paket Yükleme ---
+Pardus kullanırken yüklediğiniz bir sürü program format sonrasında gidiyor.
+Önceki sistemdeki tüm programların listesini uzun uzun elle çıkartmak yerine
+Popi'yi kullanarak otomatik olarak bunu yapabilirsiniz. Format atmadan önce 
+Popi'yi kullanarak listesini çıkardığınız (varsayılan dışı yani Pardus
+kurulumundan sonra yüklediğiniz) paketleri format sonrasında Popi'yi 
+kullanarak yüklemenizi sağlar.
+
+PROGRAMI KULLANMAK İÇİN:
+1- corepacks ve pr dosyalarını bir dizine koyun
+2- terminalden o dizine girin
+3- python pr yazarak uygulamayı çalıştırın
+(NOT: izin hatası verirse sudo chmod +x pr yapın)
+
+KURULU PAKET LİSTESİNİ ÇIKARTMAK İÇİN:
+Varsayılan dışı paketlerin listesini çıkartmak için 3. seçeneği kullanın.
+(1. ve 2. şıklar Pisiyi güncellemek amacıyla yapılmıştır. Paket listesini
+çıkartmadan önce yapmanız önerilir)
+
+PAKET LİSTESİNİ KURMAK İÇİN:
+Önceden Popi'yi kullanarak çıkartığınız listeyi (adı userpacks olmalı,
+eğer değilse bile userpacks olarak değiştirin) pr ile aynı dizine koyun.
+Programdaki 4. seçeneği çalıştırın
