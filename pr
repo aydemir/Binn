@@ -2,41 +2,24 @@
 """ --- Pardus Online Paket Yukleme --- """
 import os
 from pisi.db.installdb import InstallDB
-
-def export_installed_packages():
-  os.system("echo Getting list of pisi installed packages... ")
-  ipdb = InstallDB()
-  installed_packages = ipdb.list_installed()
-  installed_packages.sort()
-  f = open("installed_packages.lst", "w")
-  map(lambda x: f.write("%s\n" % x), installed_packages)
-  f.close()
-  os.system("echo Done!\n")
-
-def import_installed_packages(imported_list):
-  os.system("echo Put list of pisi installed packages into a list... ")
-  source_file = "installed_packages.lst"
-  f = open(source_file, "r")
-  map(lambda x: imported_list.append(x.strip("\n")), f)
-  f.close()
-  return imported_list
+from exp_imp_pisi_packs import import_installed_packages
+from exp_imp_pisi_packs import export_installed_packages
+from install_pisi_packs import install_user_packs
 
 def extractPack():
   """ Gets installed Pisi packages by user named userpacks """
+  os.system("echo starting...\n")
   export_installed_packages()
   imported_list = []
   import_installed_packages(imported_list)
-  
-  os.system("echo Put list of pisi core packages into another list... ")
+
   corepacks = open("corepacks","r")#put core packages into another list
   corep = []
   for line in corepacks:
     packname = line.split()
     corep.append(packname[0])
   corepacks.close()
-  os.system("echo Done!\n")
   
-  os.system("echo Comparisons... ")
   userpacks = open("userpacks.lst","w")
   #compare lists  
   for line in imported_list:
@@ -44,14 +27,14 @@ def extractPack():
       userpacks.write(line+"\n")
   userpacks.close()
   os.system("echo Done!\n")
-  
+""" 
 def installPack():
   userpacks=open("userpacks","r")
   for line in userpacks:
     #os.system("sudo pisi it -y --reinstall %s" % line)
     os.system("sudo pisi it %s" % line)
   userpacks.close()
-
+"""
 def menuPrinting():
   print '\n' + '=' * 9 + ' MENU ' + '=' * 9
   print '1-Update repository'
@@ -70,7 +53,7 @@ def executeCode(ch):
   elif ch == 3:
     extractPack()
   elif ch == 4:
-    installPack()
+    install_user_packs()
   elif ch == 0:
     exit()
 
