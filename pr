@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """ --- Pardus Online Paket Yukleme --- """
 import os
-import pisi
+from pisi.db.installdb import InstallDB
 
 #binary search
 def myBinarySearch(seq, t):
@@ -22,7 +22,7 @@ def extractPack():
   """ Gets installed Pisi packages by user named userpacks """
   os.system("echo Getting list of pisi installed packages... ")
   aipf=open("allpacks","w")
-  ipdb = pisi.db.installdb.InstallDB()
+  ipdb = InstallDB()
   tempList = ipdb.list_installed()
   tempList.sort()
   for entry in tempList:
