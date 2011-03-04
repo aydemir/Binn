@@ -3,21 +3,6 @@
 import os
 from pisi.db.installdb import InstallDB
 
-#binary search
-def myBinarySearch(seq, t):
-  """ Binary Search Algorithm """
-  min = 0; max = len(seq) - 1
-  while 1:
-    if max < min:
-      return -1
-    m = (min + max) / 2
-    if seq[m] < t:
-      min = m + 1
-    elif seq[m] > t:
-      max = m - 1
-    else:
-      return m
-
 def export_installed_packages():
   os.system("echo Getting list of pisi installed packages... ")
   ipdb = InstallDB()
@@ -28,43 +13,38 @@ def export_installed_packages():
   f.close()
   os.system("echo Done!\n")
 
-def extractPack():
-  """ Gets installed Pisi packages by user named userpacks """
-  export_installed_packages()
-  
+def import_installed_packages(imported_list):
   os.system("echo Put list of pisi installed packages into a list... ")
   source_file = "installed_packages.lst"
-  imported_list = []
   f = open(source_file, "r")
   map(lambda x: imported_list.append(x.strip("\n")), f)
   f.close()
-  """  
-  f=open("installed_packages.lst","r")#put all packages into a list
-  allp=[]
-  for line in f:
-    allp.append(line)
-  f.close()
-  os.system("echo Done!\n")
-  """
+  return imported_list
+
+def extractPack():
+  """ Gets installed Pisi packages by user named userpacks """
+  export_installed_packages()
+  imported_list = []
+  import_installed_packages(imported_list)
+  
   os.system("echo Put list of pisi core packages into another list... ")
-  corepacks=open("corepacks","r")#put core packages into another list
-  corep=[]
+  corepacks = open("corepacks","r")#put core packages into another list
+  corep = []
   for line in corepacks:
-    packname=line.split()
+    packname = line.split()
     corep.append(packname[0])
   corepacks.close()
   os.system("echo Done!\n")
   
   os.system("echo Comparisons... ")
-  userpacks=open("userpacks","w")
+  userpacks = open("userpacks.lst","w")
   #compare lists  
   for line in imported_list:
-    index=myBinarySearch(corep,line)
-    if index == -1:
+    if line not in corep:
       userpacks.write(line+"\n")
-  os.system("echo Done!\n")
   userpacks.close()
-
+  os.system("echo Done!\n")
+  
 def installPack():
   userpacks=open("userpacks","r")
   for line in userpacks:
@@ -73,7 +53,6 @@ def installPack():
   userpacks.close()
 
 def menuPrinting():
-  """It prints menu"""
   print '\n' + '=' * 9 + ' MENU ' + '=' * 9
   print '1-Update repository'
   print '2-Update Pisi'
