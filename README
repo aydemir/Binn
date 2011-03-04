@@ -20,4 +20,7 @@ Varsayılan dışı paketlerin listesini çıkartmak için 3. seçeneği kullan�
 PAKET LİSTESİNİ KURMAK İÇİN:
 Önceden Popi'yi kullanarak çıkartığınız listeyi (adı userpacks olmalı,
 eğer değilse bile userpacks olarak değiştirin) pr ile aynı dizine koyun.
-Programdaki 4. seçeneği çalıştırın
+Programdaki 4. seçeneği çalıştırın.
+
+UYARI!! Uygulamada istenen şifreler kullanıcı şifresidir. Root şifresi değildir!
+Şifreler Pisi'nin depo güncellemesi, paket güncellemesi ve paket yükleyebilmesi için gereklidir.
