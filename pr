@@ -18,16 +18,19 @@ def myBinarySearch(seq, t):
     else:
       return m
 
+def export_installed_packages():
+  os.system("echo Getting list of pisi installed packages... ")
+  ipdb = InstallDB()
+  installed_packages = ipdb.list_installed()
+  installed_packages.sort()
+  f = open("installed_packages.lst", "w")
+  map(lambda x: f.write("%s\n" % x), installed_packages)
+  f.close()
+  os.system("echo Done!\n")
+
 def extractPack():
   """ Gets installed Pisi packages by user named userpacks """
-  os.system("echo Getting list of pisi installed packages... ")
-  aipf=open("allpacks","w")
-  ipdb = InstallDB()
-  tempList = ipdb.list_installed()
-  tempList.sort()
-  for entry in tempList:
-    aipf.write(entry + "\n")
-  os.system("echo Done!\n")
+  export_installed_packages()
   
   os.system("echo Put list of pisi installed packages into a list... ")
   allpacks=open("allpacks","r")#put all packages into a list
