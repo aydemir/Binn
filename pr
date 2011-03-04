@@ -33,14 +33,19 @@ def extractPack():
   export_installed_packages()
   
   os.system("echo Put list of pisi installed packages into a list... ")
-  allpacks=open("allpacks","r")#put all packages into a list
+  source_file = "installed_packages.lst"
+  imported_list = []
+  f = open(source_file, "r")
+  map(lambda x: imported_list.append(x.strip("\n")), f)
+  f.close()
+  """  
+  f=open("installed_packages.lst","r")#put all packages into a list
   allp=[]
-  for line in allpacks:    
-    packname=line.split()
-    allp.append(packname[0])
-  allpacks.close()
+  for line in f:
+    allp.append(line)
+  f.close()
   os.system("echo Done!\n")
-  
+  """
   os.system("echo Put list of pisi core packages into another list... ")
   corepacks=open("corepacks","r")#put core packages into another list
   corep=[]
@@ -53,10 +58,10 @@ def extractPack():
   os.system("echo Comparisons... ")
   userpacks=open("userpacks","w")
   #compare lists  
-  for line in allp:
+  for line in imported_list:
     index=myBinarySearch(corep,line)
     if index == -1:
-      userpacks.write(line + '\n')
+      userpacks.write(line+"\n")
   os.system("echo Done!\n")
   userpacks.close()
 
