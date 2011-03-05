@@ -1,9 +1,8 @@
-from pisi.db.installdb import InstallDB
+from pisi.api import list_installed
 
 def export_installed_packages():
   """ It exports packages to a file named installed_packages.lst """
-  ipdb = InstallDB()
-  installed_packages = ipdb.list_installed()
+  installed_packages = list_installed()
   installed_packages.sort()
   f = open("installed_packages.lst", "w")
   map(lambda x: f.write("%s\n" % x), installed_packages)

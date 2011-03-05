@@ -2,8 +2,8 @@
 from os import system
 
 def install_user_packs():
-  userpacks=open("userpacks","r")
+  userpacks=open("userpacks.lst","r")
   for line in userpacks:
     #os.system("sudo pisi it -y --reinstall %s" % line)
-    os.system("sudo pisi it %s" % line)
+    system("sudo pisi it %s" % line)
   userpacks.close() 
