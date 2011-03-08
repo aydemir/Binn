@@ -5,10 +5,11 @@ from pisi.db.installdb import InstallDB
 from exp_imp_pisi_packs import import_installed_packages
 from exp_imp_pisi_packs import export_installed_packages
 from install_pisi_packs import install_user_packs
+from update_repos import update_pisi_repositories
 
 def extractPack():
   """ Gets installed Pisi packages by user named userpacks """
-  os.system("echo starting...\n")
+  os.system("echo Starting...\n")
   export_installed_packages()
   imported_list = []
   import_installed_packages(imported_list)
@@ -38,11 +39,10 @@ def menuPrinting():
 
 def executeCode(ch):
   if ch == 1:
-    os.system("sudo pisi ur")
-    os.system("echo Checking repository is done!")
+    update_pisi_repositories()
+    os.system("echo Updating repository is done!")
   elif ch == 2:
     os.system("sudo pisi up")
-    os.system("echo Updating repository is done!")
   elif ch == 3:
     extractPack()
   elif ch == 4:

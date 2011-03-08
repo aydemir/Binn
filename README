@@ -7,10 +7,10 @@ kurulumundan sonra yüklediğiniz) paketleri format sonrasında Popi'yi
 kullanarak yüklemenizi sağlar.
 
 PROGRAMI KULLANMAK İÇİN:
-1- corepacks ve pr dosyalarını bir dizine koyun
-2- terminalden o dizine girin
-3- python pr yazarak uygulamayı çalıştırın
-(NOT: izin hatası verirse sudo chmod +x pr yapın)
+1- uygulamanın tüm dosyalarını indirip bir dizine koyun
+2- terminalden 'cd' komutu yardımıyla o dizine girin
+3- sudo python pr yazarak uygulamayı çalıştırın
+4- gelen menü yardımıyla programı kullanmaya başlayın (:
 
 KURULU PAKET LİSTESİNİ ÇIKARTMAK İÇİN:
 Varsayılan dışı paketlerin listesini çıkartmak için 3. seçeneği kullanın.
