@@ -1,15 +1,15 @@
---- Pardus Online Paket Yükleme ---
+--- Binn ---
 Pardus kullanırken yüklediğiniz bir sürü program format sonrasında gidiyor.
 Önceki sistemdeki tüm programların listesini uzun uzun elle çıkartmak yerine
-Popi'yi kullanarak otomatik olarak bunu yapabilirsiniz. Format atmadan önce 
-Popi'yi kullanarak listesini çıkardığınız (varsayılan dışı yani Pardus
-kurulumundan sonra yüklediğiniz) paketleri format sonrasında Popi'yi 
+Binn'i kullanarak otomatik olarak bunu yapabilirsiniz. Format atmadan önce 
+Binn'i kullanarak listesini çıkardığınız (varsayılan dışı yani Pardus
+kurulumundan sonra yüklediğiniz) paketleri format sonrasında Binn'i 
 kullanarak yüklemenizi sağlar.
 
 PROGRAMI KULLANMAK İÇİN:
 1- uygulamanın tüm dosyalarını indirip bir dizine koyun
 2- terminalden 'cd' komutu yardımıyla o dizine girin
-3- sudo python pr yazarak uygulamayı çalıştırın
+3- sudo python binn.py yazarak uygulamayı çalıştırın
 4- gelen menü yardımıyla programı kullanmaya başlayın (:
 
 KURULU PAKET LİSTESİNİ ÇIKARTMAK İÇİN:
@@ -18,9 +18,16 @@ Varsayılan dışı paketlerin listesini çıkartmak için 3. seçeneği kullan�
 çıkartmadan önce yapmanız önerilir)
 
 PAKET LİSTESİNİ KURMAK İÇİN:
-Önceden Popi'yi kullanarak çıkartığınız listeyi (adı userpacks olmalı,
+Önceden Binn'i kullanarak çıkartığınız listeyi (adı userpacks olmalı,
 eğer değilse bile userpacks olarak değiştirin) pr ile aynı dizine koyun.
 Programdaki 4. seçeneği çalıştırın.
 
 UYARI!! Uygulamada istenen şifreler kullanıcı şifresidir. Root şifresi değildir!
 Şifreler Pisi'nin depo güncellemesi, paket güncellemesi ve paket yükleyebilmesi için gereklidir.
+
+***********************************************************************************
+Programın ismini merak edenler için: Yakın arkadaşlarımın olduğu bir grupta
+(grup adı: Ç.E.A.S.Y => Çok Eğlendik Ama Sen Yoktun), bir şeyin çok güzel, çok iyi
+olduğunu anlatmak için kullandığımız bir ifadedir (:
+Örnek olarak: Bu araba çok iyi gidiyor.. Ama çok iyi.. Bin.. Amaa binnn.. :D
+***********************************************************************************
