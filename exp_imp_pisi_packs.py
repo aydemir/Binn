@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from pisi.api import list_installed
 
 def export_installed_packages():

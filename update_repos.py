@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from pisi.api import list_repos
 from pisi.api import update_repos
 
