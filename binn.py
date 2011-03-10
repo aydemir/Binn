@@ -6,9 +6,9 @@ from install_pisi_packs import install_user_packs
 from update_repos import update_pisi_repositories
 from upgrade_packs import upgrade_pisi_packs
 
-def extractPack():
+def extract_pack():
   """ Gets installed Pisi packages by user named userpacks """
-  print "Starting...\n"
+  print "Starting..."
   export_installed_packages()
   imported_list = []
   import_installed_packages(imported_list)
@@ -19,31 +19,33 @@ def extractPack():
     packname = line.split()
     corep.append(packname[0])
   corepacks.close()
-  
+
   userpacks = open("userpacks.lst","w")
   #compare lists  
   for line in imported_list:
     if line not in corep:
       userpacks.write(line+"\n")
   userpacks.close()
-  print "Done!\n"
+  print "Finished!"
 
 def menuPrinting():
-  print '\n' + '=' * 9 + ' MENU ' + '=' * 9
+  """ User menu of Binn application """
+  print '=' * 9 + ' MENU ' + '=' * 9
   print '1-Update repository'
   print '2-Update Pisi'
   print '3-Extract package list from Pisi'
   print '4-Setup packages'
-  print '0-Exit\n'
+  print '0-Exit'
+  print '=' * 24
 
 def executeCode(ch):
+  """ Menu choices """
   if ch == 1:
     update_pisi_repositories()
-    print "Updating repository is done!"
   elif ch == 2:
     upgrade_pisi_packs()
   elif ch == 3:
-    extractPack()
+    extract_pack()
   elif ch == 4:
     install_user_packs()
   elif ch == 0:
@@ -56,7 +58,7 @@ while choice != 0:
   choice = raw_input("Select one of them!\t")
   upperchoice=4
   lowerchoice=0
-  
+
   if choice.isdigit() != True:
     print "WRONG! Enter a NUMBER!\n"
     continue
