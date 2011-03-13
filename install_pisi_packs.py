@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#-*-coding: utf-8-*-
 from pisi.api import get_install_order
 from pisi.api import get_conflicts
 from pisi.api import install

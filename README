@@ -4,13 +4,13 @@ Pardus kullanırken yüklediğiniz bir sürü program format sonrasında gidiyor
 Binn'i kullanarak otomatik olarak bunu yapabilirsiniz. Format atmadan önce 
 Binn'i kullanarak listesini çıkardığınız (varsayılan dışı yani Pardus
 kurulumundan sonra yüklediğiniz) paketleri format sonrasında Binn'i 
-kullanarak yüklemenizi sağlar.
+kullanarak yükleyebilirsiniz.
 
 PROGRAMI KULLANMAK İÇİN:
-1- uygulamanın tüm dosyalarını indirip bir dizine koyun
-2- terminalden 'cd' komutu yardımıyla o dizine girin
+1- Uygulamanın tüm dosyalarını indirip bir dizine koyun
+2- Terminalden 'cd' komutu yardımıyla o dizine girin
 3- sudo python binn.py yazarak uygulamayı çalıştırın
-4- gelen menü yardımıyla programı kullanmaya başlayın (:
+4- Gelen menü yardımıyla programı kullanmaya başlayın (:
 
 KURULU PAKET LİSTESİNİ ÇIKARTMAK İÇİN:
 Varsayılan dışı paketlerin listesini çıkartmak için 3. seçeneği kullanın.

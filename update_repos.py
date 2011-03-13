@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#-*-coding: utf-8-*-
 from pisi.api import list_repos
 from pisi.api import update_repos
 

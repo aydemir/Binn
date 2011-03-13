@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#-*-coding: utf-8-*-
 from pisi.api import list_upgradable
 from pisi.api import get_upgrade_order
 from pisi.api import get_base_upgrade_order

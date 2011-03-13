@@ -1,4 +1,5 @@
 #!/usr/bin/python
+#-*-coding: utf-8-*-
 """ --- Binn --- """
 from exp_imp_pisi_packs import import_installed_packages
 from exp_imp_pisi_packs import export_installed_packages
