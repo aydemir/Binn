@@ -18,8 +18,8 @@ Varsayılan dışı paketlerin listesini çıkartmak için 3. seçeneği kullan�
 çıkartmadan önce yapmanız önerilir)
 
 PAKET LİSTESİNİ KURMAK İÇİN:
-Önceden Binn'i kullanarak çıkartığınız listeyi (adı userpacks olmalı,
-eğer değilse bile userpacks olarak değiştirin) pr ile aynı dizine koyun.
+Önceden Binn'i kullanarak çıkartığınız listeyi (adı userpacks.lst olmalı,
+eğer değilse bile userpacks.lst olarak değiştirin) binn.py ile aynı dizine koyun.
 Programdaki 4. seçeneği çalıştırın.
 
 UYARI!! Uygulamada istenen şifreler kullanıcı şifresidir. Root şifresi değildir!
