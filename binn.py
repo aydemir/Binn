@@ -8,11 +8,11 @@ from pisi.util import colorize
 def menuPrinting():
   """ User menu of Binn application """
   print colorize('=' * 9 + ' MENU ' + '=' * 9,"yellow")
-  print colorize('1-Update repository',"yellow")
-  print colorize('2-Update Pisi',"yellow")
-  print colorize('3-Extract package list from Pisi',"yellow")
-  print colorize('4-Setup packages',"yellow")
-  print colorize('0-Exit',"yellow")
+  print colorize('1-Update repository',"white")
+  print colorize('2-Update Pisi',"white")
+  print colorize('3-Extract package list from Pisi',"white")
+  print colorize('4-Setup packages',"white")
+  print colorize('0-Exit',"white")
   print colorize('=' * 24,"yellow")
 
 def executeCode(ch):
@@ -33,8 +33,12 @@ def executeCode(ch):
     try:
       f = open("userpacks.lst","r")
       
+      msg = ""
       for line in f:
-	os.system("sudo pisi it " + line)
+	tmp = line.split("\n")
+	msg = msg + tmp[0] + " "
+      
+      os.system("sudo pisi it " + msg)
       
       f.close()
     except IOError:
